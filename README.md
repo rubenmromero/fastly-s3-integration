@@ -1,6 +1,6 @@
 # Fastly S3 Integration
 
-Fastly integration with S3 to deliver and cache assets (text files, images and other binaries) stored in multiple S3 buckets through the Fastly CDN using the following setup:
+Tutorial for Fastly integration with S3 to deliver and cache assets (text files, images and other binaries) stored in multiple S3 buckets through the Fastly CDN using the following setup:
 
 * 1 Fastly service
 * 1 or more user facing domains set up in Fastly
@@ -15,7 +15,7 @@ The main goal of this tutorial is to describe how to set up a Fastly service to 
                                    V
     http[s]://<bucket_name>.s3.<aws_region>.amazonaws.com/<s3_asset_path>
 
-Which is based on S3 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#virtual-hosted-style-access" target="_blank">virtual hosted-style URLs</a>virtual hosted-style URLs, instead of using the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#path-style-access" target="_blank">path-style URLs</a>, which will be soon deprecated by AWS.
+Which is based on S3 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#virtual-hosted-style-access" target="_blank">virtual hosted-style URLs</a>, instead of using the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html#path-style-access" target="_blank">path-style URLs</a>, which will be soon deprecated by AWS.
 
 ## Setup
 
