@@ -386,8 +386,6 @@ sub vcl_hash {
 
   #if unspecified fall back to normal
   {
-
-
     set req.hash += req.url;
     set req.hash += req.http.host;
     set req.hash += req.vcl.generation;

@@ -28,7 +28,7 @@ Perform the following steps in Fastly:
 3. <a href="https://docs.fastly.com/en/guides/working-with-services#creating-a-new-host" target="_blank">Create an origin host</a> for the desired S3 regional endpoint (`s3.<aws_region>.amazonaws.com`).
 
 4. <a href="https://docs.fastly.com/en/guides/using-regular-vcl-snippets#creating-a-regular-vcl-snippet" target="_blank">Create the regular VCL snippets</a> described below:
-    * Name => S3 Buckets Handling - RECV
+    * Name => Parse URL
     * Priority => 100
     * Type => <a href="https://developer.fastly.com/reference/vcl/subroutines/recv/" target="_blank">recv</a> (within subroutine -> `recv (vcl_recv)`)
     * VCL:
@@ -40,7 +40,7 @@ Perform the following steps in Fastly:
     }
     ```
 
-    * Name => S3 Buckets Handling - MISS
+    * Name => Set S3 Bucket
     * Priority => 200
     * Type => <a href="https://developer.fastly.com/reference/vcl/subroutines/miss/" target="_blank">miss</a> (within subroutine -> `miss (vcl_miss)`)
     * VCL:
@@ -53,4 +53,6 @@ Perform the following steps in Fastly:
 
 ## Example VCL File
 
-An [example VCL file](fastly-s3-integration.vcl) is included in this project so that it can be used as reference or even uploaded to an existing service (<a href="https://docs.fastly.com/en/guides/uploading-custom-vcl" target="_blank">Uploading custom VCL</a>).
+An [example VCL file](fastly-s3-integration.vcl) is included in this project so that it can be used as reference.
+
+**\* IMPORTANT**: This example VCL file is not suitable to be directly uploaded as a custom VCL file to an existing Fastly service (<a href="https://docs.fastly.com/en/guides/uploading-custom-vcl" target="_blank">Uploading custom VCL</a>).
