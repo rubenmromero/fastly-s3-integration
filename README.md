@@ -40,8 +40,8 @@ Perform the following steps in Fastly:
     }
     ```
 
-    * Name => Set S3 Bucket
-    * Priority => 200
+    * Name => Set S3 Bucket Host
+    * Priority => 100
     * Type => <a href="https://developer.fastly.com/reference/vcl/subroutines/miss/" target="_blank">miss</a> (within subroutine -> `miss (vcl_miss)`)
     * VCL:
 
