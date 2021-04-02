@@ -21,8 +21,7 @@ variable "fastly_domain" {
 }
 
 variable "aws_region" {
-  description = "AWS region"
-  default     = "eu-central-1"
+  description = "AWS region code"
 }
 
 resource "random_id" "domain_name_suffix" {
