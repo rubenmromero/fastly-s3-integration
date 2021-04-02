@@ -59,7 +59,7 @@ Perform the following steps in Fastly:
 
        $ wget https://raw.githubusercontent.com/rubenmromero/fastly-s3-integration/master/fastly_s3_integration.tf
 
-2. Execute the following command from the project root folder:
+2. Execute the following commands from the folder in which the configuration file has been downloaded:
 
        $ export FASTLY_API_KEY=<account_api_key>
        $ terraform apply [-var fastly_service_name=<custom_name>] [-var fastly_domain=<custom_domain>] [-var aws_region=<region_code>]
