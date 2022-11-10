@@ -1,6 +1,6 @@
 title: Fastly S3 Integration
 description: Tutorial for Fastly integration with S3 to deliver and cache assets stored in multiple S3 buckets through the Fastly CDN
-google_analytics: UA-133287190-1
+google_analytics: G-4ZVNTXX89G
 show_downloads: false
 theme: jekyll-theme-cayman
 
